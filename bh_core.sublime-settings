@@ -4,7 +4,7 @@
 
     // When only either the left or right bracket can be found
     // this defines if the unmatched bracket should be shown.
-    "show_unmatched" : true,
+    "show_unmatched": true,
 
     // Do the opposite of "show_unmatched" for the languages listed below
     "show_unmatched_exceptions": [],
@@ -250,8 +250,8 @@
         // Angle
         {
             "name": "angle",
-            "open": "(<)(?!\\?)",
-            "close": "(?<!\\?)(>)",
+            "open": "(<)(?=[^?%]|$)",
+            "close": "(?:(?<=[^?%])|(?<=^))(>)",
             "style": "angle",
             "scope_exclude": ["string", "comment", "keyword.operator", "source.ruby.rails.embedded.html", "source.ruby.embedded.html"],
             "language_filter": "whitelist",
